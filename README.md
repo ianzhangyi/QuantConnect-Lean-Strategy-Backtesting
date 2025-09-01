@@ -1,55 +1,12 @@
-# quantconnect-strategy-backtesting
+# QuantConnect-strategy-backtesting
 
 ## Overview
-This repository collects multiple **QuantConnect Lean (new snake_case API)** strategies for backtesting and research.  
+This repository collects multiple **QuantConnect Lean** strategies for backtesting and research.  
 Each strategy lives in its own folder with:
 - `algorithm.py` (main strategy code)
 - `README.md` (strategy logic, parameters, metrics, how to run)
 - `params.json` (optional default parameters)
 - `results/` (small CSV/JSON summaries) and `charts/` (exported plots)
-
-> Why monorepo: shared utilities, consistent metrics and conventions, easier maintenance.  
-> For resume: pin this repo and optionally break out your top strategy into a separate “showcase” repo.
-
----
-
-## Repository Structure
-```
-quantconnect-strategy-backtesting/
-├── strategies/
-│   ├── leveraged_etf_intraday/
-│   │   ├── algorithm.py
-│   │   ├── README.md
-│   │   ├── params.json
-│   │   ├── results/           # small CSV/JSON summaries only
-│   │   └── charts/            # small PNGs only
-│   ├── gap_breakout_equities/
-│   │   ├── algorithm.py
-│   │   ├── README.md
-│   │   ├── params.json
-│   │   ├── results/
-│   │   └── charts/
-│   └── mean_reversion_pair/
-│       ├── algorithm.py
-│       ├── README.md
-│       ├── params.json
-│       ├── results/
-│       └── charts/
-├── common/                    # shared utils (optional)
-│   ├── metrics.py             # unified metrics, JSON/CSV writer
-│   ├── risk.py                # reusable risk models/helpers
-│   └── utils.py               # time/session/helper functions
-├── research/                  # notebooks for exploration (optional)
-│   └── leveraged_etf_intraday.ipynb
-├── backtests/                 # Lean CLI configs or batch scripts (optional)
-│   ├── leveraged_etf_intraday.json
-│   ├── gap_breakout_equities.json
-│   └── run_all.sh
-├── README.md                  # (this file) top-level overview + index
-├── requirements.txt           # for research/plots only (Lean runtime not required)
-└── .gitignore
-```
-
 ---
 
 ## Strategy Index
@@ -68,7 +25,7 @@ quantconnect-strategy-backtesting/
 - **Metrics**: report *at least* `CAGR, Sharpe, MaxDD, HitRatio, AvgWin, AvgLoss, Turnover`.  
   Use `common/metrics.py` to ensure comparable outputs.
 - **Artifacts**: keep `results/` and `charts/` **small**. Prefer CSV/JSON summaries and compressed PNGs.
-- **.gitignore**: do not commit large raw data or full backtest blobs.
+
 
 ---
 
