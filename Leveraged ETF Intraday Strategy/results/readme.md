@@ -1,2 +1,4 @@
 
-## Backtesting Result with different Stop Loss
+## Backtesting Result 
+
+Pics shows backtesting performance with different Stop Loss
