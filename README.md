@@ -14,7 +14,7 @@ Each strategy lives in its own folder with:
 |---|---|---|---|---|---|
 | Leveraged ETF Intraday | `strategies/leveraged_etf_intraday` | Open-pullback entry + TP/SL; trade leveraged ETFs using underlier signals | SPXL/NVDL/TMF (signals: SPY/NVDA/TLT) | ±1.5% / −0.7% & EOD | two modes: multi-entry / single-position |
 | Gap Breakout (Equities) | `strategies/gap_breakout_equities` | Gap + N-day breakout filter | S&P500 | T+1 or TP/SL | daily/minute versions |
-| Mean Reversion Pair | `strategies/mean_reversion_pair` | Spread reversion with bands | curated pairs | band exit | risk parity sizing |
+
 
 ---
 
